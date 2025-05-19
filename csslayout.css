@@ -1,0 +1,169 @@
+/* Element selector */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ID selectors */
+#main-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 2px solid #357ABD;
+}
+
+/* Flexbox for header container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigation styles */
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#main-nav ul li {
+    margin: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #357ABD;
+    outline: none;
+}
+
+/* Intro text */
+.intro-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    color: #cce0ff;
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* Main content grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Section styles */
+.image-section,
+.text-section {
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Paragraph inside text section */
+.text-section p {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    font-size: 1.1rem;
+}
+
+/* Image styling */
+#featured-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #4a90e2;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+/* Footer */
+#main-footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 6px;
+    margin-top: 40px;
+    border: 2px solid #222;
+}
+
+/* Media Queries */
+
+/* Tablets and above: wider layout */
+@media (min-width: 600px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #main-nav ul {
+        margin: 0;
+        justify-content: flex-end;
+    }
+
+    .intro-text {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop and above: larger font sizing */
+@media (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    #main-header {
+        padding: 30px 60px;
+    }
+
+    #main-footer {
+        padding: 25px 20px;
+    }
+
+    #main-nav ul {
+        gap: 30px;
+    }
+}
+
+/* Small mobile tweaks */
+@media (max-width: 359px) {
+    #main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
